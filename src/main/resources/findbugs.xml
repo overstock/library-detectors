@@ -1,0 +1,13 @@
+<FindbugsPlugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="findbugsplugin.xsd"
+        pluginid="com.overstock.findbugs.library"
+        provider="Overstock.com"
+        website="http://tech.overstock.com">
+
+        <Detector class="com.overstock.findbugs.GuavaBetaDetector" speed="fast" disabled="false"
+          reports="GBU_GUAVA_BETA_CLASS_USAGE,GBU_GUAVA_BETA_FIELD_USAGE,GBU_GUAVA_BETA_METHOD_USAGE" />
+        <BugPattern type="GBU_GUAVA_BETA_CLASS_USAGE" abbrev="GBU" category="BAD_PRACTICE"/>
+        <BugPattern type="GBU_GUAVA_BETA_FIELD_USAGE" abbrev="GBU" category="BAD_PRACTICE"/>
+        <BugPattern type="GBU_GUAVA_BETA_METHOD_USAGE" abbrev="GBU" category="BAD_PRACTICE"/>
+
+</FindbugsPlugin>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MessageCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="messagecollection.xsd">
+
+  <Plugin>
+    <ShortDescription>FindBugs Library Detection Plugin</ShortDescription>
+    <Details>Provides detectors for libraries.</Details>
+  </Plugin>
+
+  <Detector class="com.overstock.findbugs.GuavaBetaDetector">
+    <Details>Finds usages of Guava Beta APIs.</Details>
+  </Detector>
+
+  <BugPattern type="GBU_GUAVA_BETA_CLASS_USAGE">
+    <ShortDescription>Use of a Beta class</ShortDescription>
+    <LongDescription>Use of class {3}, which is annotated with Beta.</LongDescription>
+    <Details>
+<![CDATA[
+<p>Libraries should not use APIs annotated with Beta. From <a href="http://code.google.com/p/guava-libraries/">the Guava homepage</a>:
+  <cite>
+    APIs marked with the &#64;Beta annotation at the class or method level are subject to change.
+    They can be modified in any way, or even removed, in any major release. If your code is
+    a library itself (i.e. it is used on the CLASSPATH of users outside your own control), you
+    should not use beta APIs, unless you repackage them (e.g. using ProGuard).
+  </cite>
+</p>
+]]>
+    </Details>
+  </BugPattern>
+
+  <BugPattern type="GBU_GUAVA_BETA_FIELD_USAGE">
+    <ShortDescription>Use of a Beta field</ShortDescription>
+    <LongDescription>Use of field {3}, which is annotated with Beta.</LongDescription>
+    <Details>
+<![CDATA[
+<p>Libraries should not use APIs annotated with Beta. From <a href="http://code.google.com/p/guava-libraries/">the Guava homepage</a>:
+  <cite>
+    APIs marked with the &#64;Beta annotation at the class or method level are subject to change.
+    They can be modified in any way, or even removed, in any major release. If your code is
+    a library itself (i.e. it is used on the CLASSPATH of users outside your own control), you
+    should not use beta APIs, unless you repackage them (e.g. using ProGuard).
+  </cite>
+</p>
+]]>
+    </Details>
+  </BugPattern>
+
+  <BugPattern type="GBU_GUAVA_BETA_METHOD_USAGE">
+    <ShortDescription>Use of a Beta class</ShortDescription>
+    <LongDescription>Use of method {3}, which is annotated with Beta.</LongDescription>
+    <Details>
+<![CDATA[
+<p>Libraries should not use APIs annotated with &#64;Beta. From <a href="http://code.google.com/p/guava-libraries/">the Guava homepage</a>:
+  <cite>
+    APIs marked with the &#64;Beta annotation at the class or method level are subject to change.
+    They can be modified in any way, or even removed, in any major release. If your code is
+    a library itself (i.e. it is used on the CLASSPATH of users outside your own control), you
+    should not use beta APIs, unless you repackage them (e.g. using ProGuard).
+  </cite>
+</p>
+]]>
+    </Details>
+  </BugPattern>
+
+  <BugCode abbrev="GBU">Guava Beta Usage</BugCode>
+</MessageCollection>
