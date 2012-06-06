@@ -17,6 +17,14 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
+  <developers>
+    <developer>
+      <name>Ian Robertson</name>
+      <organization>Overstock.com</organization>
+      <id>irobertson</id>
+      <email>ian.b.robertson@gmail.com</email>
+    </developer>
+  </developers>
   <dependencies>
     <dependency>
       <groupId>com.google.code.findbugs</groupId>
