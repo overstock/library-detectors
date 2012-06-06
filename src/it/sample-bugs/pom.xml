@@ -28,9 +28,15 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>findbugs-maven-plugin</artifactId>
-        <version>2.4.0</version>
+        <version>2.5</version>
         <configuration>
-          <pluginList>${basedir}/../../library-detectors-trunk-SNAPSHOT.jar</pluginList>
+          <plugins>
+            <plugin>
+              <groupId>com.overstock.findbugs</groupId>
+              <artifactId>library-detectors</artifactId>
+              <version>trunk-SNAPSHOT</version>
+            </plugin>
+          </plugins>
         </configuration>
       </plugin>
     </plugins>
