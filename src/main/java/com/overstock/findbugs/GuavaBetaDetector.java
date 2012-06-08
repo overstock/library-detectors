@@ -1,10 +1,9 @@
 package com.overstock.findbugs;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.apache.bcel.Repository;
 import org.apache.bcel.classfile.AnnotationEntry;
+import org.apache.bcel.classfile.Constant;
+import org.apache.bcel.classfile.ConstantClass;
 import org.apache.bcel.classfile.Field;
 import org.apache.bcel.classfile.FieldOrMethod;
 import org.apache.bcel.classfile.JavaClass;
@@ -21,11 +20,8 @@ public class GuavaBetaDetector extends OpcodeStackDetector {
   private BugReporter bugReporter;
 
   public GuavaBetaDetector(BugReporter bugReporter) {
-    System.out.println("instance created");
     this.bugReporter = bugReporter;
   }
-
-  private Map<FieldOrMethod, Boolean> memberBetaAnnotated = new HashMap<FieldOrMethod, Boolean>();
 
   @Override
   public void sawOpcode(int seen) {
@@ -57,6 +53,18 @@ public class GuavaBetaDetector extends OpcodeStackDetector {
         }
         break;
       }
+      case LDC:
+      case LDC_W:
+      case LDC2_W: {
+        Constant c = getConstantRefOperand();
+        if (c instanceof ConstantClass) {
+          JavaClass javaClass = getOperandLibraryClass();
+          if (javaClass != null) {
+            checkJavaClass(javaClass);
+          }
+        }
+        break;
+      }
     }
   }
 
@@ -75,7 +83,6 @@ public class GuavaBetaDetector extends OpcodeStackDetector {
       bugReporter.reportMissingClass(e);
       return null;
     }
-
   }
 
   private Method getMethod(JavaClass javaClass, String name, String sig) {
@@ -125,15 +132,7 @@ public class GuavaBetaDetector extends OpcodeStackDetector {
   }
 
   private boolean isBetaAnnotated(FieldOrMethod annotated) {
-    Boolean result = memberBetaAnnotated.get(annotated);
-    if (result != null) {
-      return result;
-    }
-    else {
-      result = isBetaAnnotated(annotated.getAnnotationEntries());
-      memberBetaAnnotated.put(annotated, result);
-      return result;
-    }
+      return isBetaAnnotated(annotated.getAnnotationEntries());
   }
 
   private boolean isBetaAnnotated(AnnotationEntry[] annotationEntries) {

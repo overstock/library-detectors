@@ -1,4 +1,4 @@
-package fieldlib;
+package beta;
 
 import com.google.common.annotations.Beta;
 
