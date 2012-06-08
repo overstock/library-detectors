@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<document
+    xmlns="http://maven.apache.org/XDOC/2.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+  <properties><title>About Library Detectors</title></properties>
+  <body>
+    <p>
+      Library detectors is a <a href="http://findbugs.sourceforge.net/">Findbugs</a> plugin with detectors for certain
+      patterns which could be considered bugs in library code. It currently detects the following bugs:
+      <ul>
+        <li>
+          <b>GBU_GUAVA_BETA_CLASS_USAGE</b>
+          Reference to a class annotated with
+          <a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/annotations/Beta.html">&#64;Beta</a>
+        </li>
+        <li>
+          <b>GBU_GUAVA_BETA_FIELD_USAGE</b>
+          Reference to a field annotated with
+          <a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/annotations/Beta.html">&#64;Beta</a>
+        </li>
+        <li>
+          <b>GBU_GUAVA_BETA_METHOD_USAGE</b>
+          Reference to a method annotated with
+          <a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/annotations/Beta.html">&#64;Beta</a>
+        </li>
+      </ul>
+    </p>
+  </body>
+</document>
