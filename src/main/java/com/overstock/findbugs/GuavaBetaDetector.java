@@ -1,6 +1,7 @@
 package com.overstock.findbugs;
 
 import java.util.HashMap;
+import java.util.Map;
 
 import org.apache.bcel.Repository;
 import org.apache.bcel.classfile.AnnotationEntry;
@@ -24,7 +25,7 @@ public class GuavaBetaDetector extends OpcodeStackDetector {
     this.bugReporter = bugReporter;
   }
 
-  private HashMap<FieldOrMethod, Boolean> memberBetaAnnotated = new HashMap<FieldOrMethod, Boolean>();
+  private Map<FieldOrMethod, Boolean> memberBetaAnnotated = new HashMap<FieldOrMethod, Boolean>();
 
   @Override
   public void sawOpcode(int seen) {
