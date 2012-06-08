@@ -12,7 +12,7 @@
     <dependency>
       <groupId>it</groupId>
       <artifactId>library-with-beta-field</artifactId>
-      <version>trunk-SNAPSHOT</version>
+      <version>@project.version@</version>
     </dependency>
   </dependencies>
   <build>
