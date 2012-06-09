@@ -6,7 +6,7 @@
   <properties><title>About Library Detectors</title></properties>
   <body>
     <p>
-      Library detectors is a <a href="http://findbugs.sourceforge.net/">Findbugs</a> plugin with detectors for certain
+      Library detectors is a <a href="http://findbugs.sourceforge.net/">FindBugs</a> plugin with detectors for certain
       patterns which could be considered bugs in library code. It currently detects the following bugs:
       <ul>
         <li>
