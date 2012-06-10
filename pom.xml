@@ -82,6 +82,7 @@
           <streamLogs>true</streamLogs>
           <settingsFile>src/it/settings.xml</settingsFile>
           <postBuildHookScript>verify</postBuildHookScript>
+          <localRepositoryPath>${project.build.directory}/local-repo</localRepositoryPath>
           <setupIncludes>
             <setupInclude>library-with-beta-field/pom.xml</setupInclude>
           </setupIncludes>
