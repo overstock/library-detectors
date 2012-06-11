@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.overstock.findbugs</groupId>
   <artifactId>library-detectors</artifactId>
-  <version>trunk-SNAPSHOT</version>
+  <version>1.0</version>
   <parent>
     <groupId>org.sonatype.oss</groupId>
     <artifactId>oss-parent</artifactId>
