@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>it</groupId>
   <artifactId>library-with-beta-field</artifactId>
-  <version>trunk-SNAPSHOT</version>
+  <version>1.0</version>
   <dependencies>
     <dependency>
       <groupId>com.google.guava</groupId>

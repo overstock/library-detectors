@@ -12,7 +12,7 @@
     <dependency>
       <groupId>it</groupId>
       <artifactId>library-with-beta-field</artifactId>
-      <version>@project.version@</version>
+      <version>1.0</version>
     </dependency>
   </dependencies>
   <build>
@@ -34,7 +34,7 @@
             <plugin>
               <groupId>com.overstock.findbugs</groupId>
               <artifactId>library-detectors</artifactId>
-              <version>trunk-SNAPSHOT</version>
+              <version>@project.version@</version>
             </plugin>
           </plugins>
         </configuration>
