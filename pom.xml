@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.overstock.findbugs</groupId>
   <artifactId>library-detectors</artifactId>
-  <version>trunk-SNAPSHOT</version>
+  <version>1.1</version>
   <parent>
     <groupId>org.sonatype.oss</groupId>
     <artifactId>oss-parent</artifactId>
@@ -15,7 +15,7 @@
     <url>https://github.com/overstock/library-detectors</url>
     <connection>scm:git:git://github.com/overstock/library-detectors.git</connection>
     <developerConnection>scm:git:git@github.com:overstock/library-detectors.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>library-detectors-1.1</tag>
   </scm>
   <licenses>
     <license>
