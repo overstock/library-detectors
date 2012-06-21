@@ -6,17 +6,17 @@
   <properties><title>Changes in Library Detectors</title></properties>
   <body>
     <section name="Changes in Library Detectors">
-      <h3>Release 1.0 (2012-06-11)</h3>
-        <ul>
-          <li>Initial Release</li>
-        </ul>
-
       <h3>Release 1.1 (2012-06-21)</h3>
         <ul>
           <li>
             No functional changes in this release; it is being made soley to try to address an indexing issue on Maven
             Central (<a href="https://issues.sonatype.org/browse/MVNCENTRAL-214">MVNCENTRAL-214</a>)
           </li>
+        </ul>
+
+      <h3>Release 1.0 (2012-06-11)</h3>
+        <ul>
+          <li>Initial Release</li>
         </ul>
     </section>
   </body>
