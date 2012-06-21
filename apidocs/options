@@ -15,10 +15,10 @@
 -docencoding
 'UTF-8'
 -doctitle
-'Library Detectors 1.0 API'
+'Library Detectors 1.1 API'
 -linkoffline
 'http://download.oracle.com/javase/6/docs/api' '/home/ian/git/library-detectors/target/checkout/target/javadoc-bundle-options'
 -use
 -version
 -windowtitle
-'Library Detectors 1.0 API'
+'Library Detectors 1.1 API'
