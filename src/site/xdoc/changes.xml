@@ -10,6 +10,14 @@
         <ul>
           <li>Initial Release</li>
         </ul>
+
+      <h3>Release 1.1 (2012-06-21)</h3>
+        <ul>
+          <li>
+            No functional changes in this release; it is being made soley to try to address an indexing issue on Maven
+            Central (<a href="https://issues.sonatype.org/browse/MVNCENTRAL-214">MVNCENTRAL-214</a>)
+          </li>
+        </ul>
     </section>
   </body>
 </document>
