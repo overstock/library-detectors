@@ -24,6 +24,11 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
+  <issueManagement>
+    <url>https://github.com/overstock/library-detectors/issues</url>
+    <system>GitHub Issues</system>
+  </issueManagement>
+
   <developers>
     <developer>
       <name>Ian Robertson</name>
