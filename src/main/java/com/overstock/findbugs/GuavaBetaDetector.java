@@ -1,5 +1,10 @@
 package com.overstock.findbugs;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+
 import org.apache.bcel.Repository;
 import org.apache.bcel.classfile.AnnotationEntry;
 import org.apache.bcel.classfile.Constant;
@@ -16,6 +21,16 @@ import edu.umd.cs.findbugs.bcel.OpcodeStackDetector;
 
 public class GuavaBetaDetector extends OpcodeStackDetector {
   private final static String BETA = "Lcom/google/common/annotations/Beta;";
+
+  private final static Set<String> IGNORE;
+  static {
+    Set<String> ignore = new HashSet<String>();
+    String property = System.getProperty("com.overstock.findbugs.ignore");
+    if (property != null) {
+      ignore.addAll(Arrays.asList(property.split(",")));
+    }
+    IGNORE = Collections.unmodifiableSet(ignore);
+  }
 
   private BugReporter bugReporter;
 
@@ -34,7 +49,7 @@ public class GuavaBetaDetector extends OpcodeStackDetector {
         if (javaClass != null) {
           checkJavaClass(javaClass);
           Method method = getMethod(javaClass, getNameConstantOperand(), getSigConstantOperand());
-          if (method != null && isBetaAnnotated(method)) {
+          if (method != null && isBetaAnnotated(method) && !IGNORE.contains(javaClass.getClassName())) {
             bugReporter.reportBug(bugInstance("GBU_GUAVA_BETA_METHOD_USAGE").addCalledMethod(this));
           }
         }
@@ -46,7 +61,7 @@ public class GuavaBetaDetector extends OpcodeStackDetector {
         if (javaClass != null) {
           checkJavaClass(javaClass);
           Field field = getField(javaClass, getNameConstantOperand());
-          if (field != null && isBetaAnnotated(field)) {
+          if (field != null && isBetaAnnotated(field) && !IGNORE.contains(javaClass.getClassName())) {
             bugReporter.reportBug(
               bugInstance("GBU_GUAVA_BETA_FIELD_USAGE").addReferencedField(this));
           }
@@ -122,7 +137,7 @@ public class GuavaBetaDetector extends OpcodeStackDetector {
   }
 
   private void checkJavaClass(JavaClass javaClass) {
-    if (isBetaAnnotated(javaClass.getAnnotationEntries())) {
+    if (isBetaAnnotated(javaClass.getAnnotationEntries()) && !IGNORE.contains(javaClass.getClassName())) {
       bugReporter.reportBug(bugInstance("GBU_GUAVA_BETA_CLASS_USAGE").addClass(javaClass));
     }
   }
