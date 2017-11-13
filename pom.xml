@@ -58,6 +58,21 @@
         </exclusion>
       </exclusions>
     </dependency>
+
+    <!-- pre-download dependencies needed by integration tests, as those
+         test will point to our ~/.m2 repository -->
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>11.0.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.code.findbugs</groupId>
+      <artifactId>jsr305</artifactId>
+      <version>1.3.9</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
@@ -132,6 +147,14 @@
             <phase>deploy</phase>
           </execution>
         </executions>
+      </plugin>
+
+      <!-- pre-download plugins needed by integration tests, as those
+           test will point to our ~/.m2 repository -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>findbugs-maven-plugin</artifactId>
+        <version>3.0.5</version>
       </plugin>
     </plugins>
   </build>
