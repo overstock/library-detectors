@@ -28,7 +28,7 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>findbugs-maven-plugin</artifactId>
-        <version>2.5</version>
+        <version>3.0.5</version>
         <configuration>
           <jvmArgs>-Dcom.overstock.findbugs.ignore=beta.BetaClass,beta.BetaField,beta.BetaMethod</jvmArgs>
           <plugins>
