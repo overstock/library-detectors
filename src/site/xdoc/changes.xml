@@ -6,7 +6,7 @@
   <properties><title>Changes in Library Detectors</title></properties>
   <body>
     <section name="Changes in Library Detectors">
-      <h3>Release 1.2.0 (2017-11-12)</h3>
+      <h3>Release 1.2.0 (2017-11-13)</h3>
       <ul>
         <li><a href="https://github.com/overstock/library-detectors/issues/1">Add configuration to ignore specific @Beta interfaces</a></li>
       </ul>
