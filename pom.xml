@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.overstock.findbugs</groupId>
   <artifactId>library-detectors</artifactId>
-  <version>trunk-SNAPSHOT</version>
+  <version>1.2.0</version>
   <name>Library Detectors</name>
   <description>Findbugs Detectors for library projects</description>
   <url>https://github.com/overstock/library-detectors</url>
@@ -10,7 +10,7 @@
     <url>https://github.com/overstock/library-detectors</url>
     <connection>scm:git:git://github.com/overstock/library-detectors.git</connection>
     <developerConnection>scm:git:git@github.com:overstock/library-detectors.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>library-detectors-1.2.0</tag>
   </scm>
   <licenses>
     <license>
