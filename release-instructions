@@ -1,0 +1,8 @@
+1: Edit pom.xml, changing the version and tag tags
+2: mvn clean deploy
+3: Go to https://oss.sonatype.org/, find the staging repository, and close it.
+4: If repo closes sucessfully, release it.
+5: mvn clean site - this will deploy the site.
+6: git tag library-detectors-a.b.c
+7: Edit pom.xml, reverting back version and tag tags
+8: git push
