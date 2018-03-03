@@ -25,4 +25,9 @@ library-detectors
 
 See [the site page][Site] for more information.
 
+References
+----------
+
+* [Guava Beta Checker](https://github.com/google/guava-beta-checker) offers similar functionality
+
 [Site]: http://overstock.github.com/library-detectors/
